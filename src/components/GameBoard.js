@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Cell from './Cell'
 
 export class GameBoard extends Component {
   state = {
@@ -42,9 +43,11 @@ export class GameBoard extends Component {
                   <tr key={i}>
                     {col.map((row, j) => {
                       return (
-                        <td key={j} onClick={() => this.cellClicked(i, j)}>
-                          {this.state.board[i][j]}
-                        </td>
+                        <Cell
+                          key={j}
+                          display={this.state.board[i][j]}
+                          handleClick={() => this.cellClicked(i, j)}
+                        />
                       )
                     })}
                   </tr>
