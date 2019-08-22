@@ -17,6 +17,8 @@ td {
   background-color: pink;
   border: 5px solid rgb(146, 146, 255);
   text-align: center;
+  height: 3rem;
+  width: 3rem;
 }
 
 #root,
